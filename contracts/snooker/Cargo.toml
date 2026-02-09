@@ -1,6 +1,6 @@
 [package]
 name = "chain-snooker"
-version = "1.0.0"
+version = "1.0.2"
 edition = "2021"
 authors = ["Fred Kyung-jin Rezeau <hello@kyungj.in>"]
 description = "A Stellar smart contract implementing a trustless pool game with onchain physics validation and streak-based scoring"
