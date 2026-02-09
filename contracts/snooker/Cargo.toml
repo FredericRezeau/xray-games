@@ -1,0 +1,19 @@
+[package]
+name = "chain-snooker"
+version = "1.0.0"
+edition = "2021"
+authors = ["Fred Kyung-jin Rezeau <hello@kyungj.in>"]
+description = "A Stellar smart contract implementing a trustless pool game with onchain physics validation and streak-based scoring"
+repository = "https://github.com/fredericrezeau/xray-games"
+publish = false
+
+[lib]
+crate-type = ["lib", "cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+common = { path = "../common" }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
