@@ -5,7 +5,7 @@
 */
 
 use crate::types::{House, OhlossPlayer};
-use soroban_sdk::{contractclient, Address, Env};
+use soroban_sdk::{contractclient, Address, Bytes, BytesN, Env};
 
 #[allow(dead_code)]
 #[contractclient(name = "OhlossClient")]
@@ -57,13 +57,15 @@ impl<'a> Ohloss<'a> {
             .selected_faction
     }
 
-    pub fn start(&self, player: &Address, wager: i128) -> u32 {
+    pub fn start(&self, player: &Address, wager: i128, commitment: &BytesN<32>) -> u32 {
         assert!(wager >= self.min_wager, "wager too small");
 
+        let hash = self.env.crypto()
+            .sha256(&Bytes::from_slice(self.env, &commitment.to_array())).to_array();
         let player_faction = self.get_faction(player);
-        let opponent_faction = self.pick_faction(player_faction);
+        let opponent_faction = self.pick_faction(player_faction, (hash[4] as u32) % 2);
         let opponent = self.get_opponent(opponent_faction);
-        let session = self.env.prng().gen::<u64>() as u32;
+        let session = u32::from_be_bytes([hash[0], hash[1], hash[2], hash[3]]);
 
         opponent.require_auth();
 
@@ -83,12 +85,11 @@ impl<'a> Ohloss<'a> {
         self.client().end_game(&session, &won);
     }
 
-    fn pick_faction(&self, faction: u32) -> u32 {
-        let rand_bit = (self.env.prng().gen::<u64>() % 2) as u32;
+    fn pick_faction(&self, faction: u32, bit: u32) -> u32 {
         match faction {
-            0 => 1 + rand_bit,
-            1 => if rand_bit == 0 { 0 } else { 2 },
-            2 => rand_bit,
+            0 => 1 + bit,
+            1 => if bit == 0 { 0 } else { 2 },
+            2 => bit,
             _ => panic!("invalid faction"),
         }
     }

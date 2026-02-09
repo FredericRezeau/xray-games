@@ -80,7 +80,7 @@ pub fn start(env: &Env, player: Address, commitment: BytesN<32>, wager: i128) ->
 
     // Ohloss
     let id = if wager > 0 {
-        ohloss(env).map(|ol| ol.start(&player, wager))
+        ohloss(env).map(|ol| ol.start(&player, wager, &commitment))
     } else {
         None
     };
