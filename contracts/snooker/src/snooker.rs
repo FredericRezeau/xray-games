@@ -44,6 +44,16 @@ where
     score
 }
 
+pub fn streak(score: u32) -> u32 {
+    let mut streak = 1u32;
+    for (i, &s) in PARAMS.target_scores.iter().enumerate() {
+        if score >= s {
+            streak = i as u32 + 1;
+        }
+    }
+    streak
+}
+
 pub fn start(env: &Env, player: Address, commitment: BytesN<32>, wager: i128) -> Result<Session, Error> {
     if !storage::has_admin(env) {
         return Err(Error::NotInitialized);
@@ -132,8 +142,7 @@ pub fn end(env: &Env, player: Address, preimage: BytesN<32>, shots: Vec<Ball>) -
 
     if won {
         let mut targets = storage::get_targets(env);
-        let streak = PARAMS.target_scores.iter().position(|&s| s <= score).map(|i| i as u32 + 1).unwrap_or(1);
-        targets.push_back(TargetEntry { score: streak, timestamp: env.ledger().timestamp() });
+        targets.push_back(TargetEntry { score: streak(score), timestamp: env.ledger().timestamp() });
         storage::set_targets(env, &targets);
     }
 

@@ -1,6 +1,6 @@
 [package]
 name = "chain-slicer"
-version = "1.0.3"
+version = "1.0.4"
 edition = "2021"
 authors = ["Fred Kyung-jin Rezeau <hello@kyungj.in>"]
 description = "A Stellar smart contract implementing a trustless geometry puzzle game verified by zero-knowledge proofs"

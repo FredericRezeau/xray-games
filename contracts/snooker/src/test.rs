@@ -8,7 +8,7 @@
 extern crate std;
 use std::println;
 use super::*;
-use crate::snooker::score;
+use crate::snooker::{score, streak};
 use crate::types::{Ball, Pocket};
 use soroban_sdk::{
     testutils::{Address as _, Logs},
@@ -114,6 +114,29 @@ fn test_score_66() {
         &|i| pockets[i]
     );
     assert_eq!(score, 66);
+}
+
+#[test]
+fn test_streaks() {
+    // Below minimum — clamp to 1.
+    assert_eq!(streak(0), 1);
+    assert_eq!(streak(20), 1);
+
+    // Exact thresholds.
+    assert_eq!(streak(21), 1);
+    assert_eq!(streak(39), 2);
+    assert_eq!(streak(66), 3);
+    assert_eq!(streak(102), 4);
+    assert_eq!(streak(147), 5);
+
+    // Inexact thresholds.
+    assert_eq!(streak(30), 1);
+    assert_eq!(streak(50), 2);
+    assert_eq!(streak(80), 3);
+    assert_eq!(streak(120), 4);
+
+    // Max score still 5.
+    assert_eq!(streak(200), 5);
 }
 
 #[test]

@@ -247,7 +247,7 @@ dependencies = [
 
 [[package]]
 name = "chain-slicer"
-version = "1.0.2"
+version = "1.0.4"
 dependencies = [
  "common",
  "soroban-sdk",
@@ -255,7 +255,7 @@ dependencies = [
 
 [[package]]
 name = "chain-snooker"
-version = "1.0.2"
+version = "1.0.4"
 dependencies = [
  "common",
  "soroban-sdk",
