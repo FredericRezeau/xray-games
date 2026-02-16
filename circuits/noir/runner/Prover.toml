@@ -1,0 +1,762 @@
+# Runner ZK Proof - Prover.toml
+# FP_SCALE=1000 FP_GM=29340 FP_FRICTION=9000
+# FP_WALL_L=2000 FP_WALL_R=9000 FP_DT=100
+# MAX_PARABOLAS=50 MAX_STEPS=20 EPSILON=1000
+
+level_hash = "0x0ef83136c98d3eb1550f792477ebac0856341b6f73993a5099b4a899d7086be5"
+score = 12
+
+level_length = 500
+level = [160, 128, 51, 16, 0, 4, 204, 65, 51, 16, 6, 76, 117, 16, 4, 204, 64, 9, 19, 213, 64, 14, 69, 48, 3, 19, 244, 224, 4, 77, 212, 0, 0, 2, 0, 177, 92, 0, 196, 207, 27, 0, 228, 83, 0, 49, 63, 78, 0, 177, 92, 0, 196, 207, 27, 0, 85, 255, 85, 0, 0, 10, 4, 204, 64, 9, 19, 213, 64, 4, 77, 212, 0, 0, 2, 0, 19, 49, 0, 100, 199, 81, 0, 16, 16, 16, 68, 64, 0, 32, 2, 2, 2, 4, 204, 0, 2, 1, 2, 4, 68, 0, 64, 128, 17, 16, 4, 4, 4, 1, 17, 0, 8, 0, 177, 92, 0, 196, 207, 27, 0, 19, 49, 0, 100, 199, 81, 0, 16, 16, 16, 68, 64, 0, 32, 4, 204, 64, 9, 19, 213, 64, 11, 21, 192, 12, 76, 241, 176, 4, 204, 64, 9, 19, 213, 64, 11, 21, 192, 12, 76, 241, 176, 11, 21, 192, 12, 76, 241, 176, 8, 8, 8, 8, 0, 177, 92, 0, 196, 207, 27, 0, 32, 32, 32, 76, 192, 1, 48, 8, 8, 8, 1, 51, 0, 76, 0, 177, 92, 0, 196, 207, 27, 0, 76, 196, 0, 145, 61, 84, 0, 128, 1, 0, 0, 0, 2, 2, 0, 64, 0, 0, 0, 128, 228, 83, 0, 49, 63, 78, 0, 177, 92, 0, 196, 207, 27, 0, 177, 92, 0, 196, 207, 27, 0, 64, 128, 32, 32, 64, 1, 0, 0, 0, 8, 2, 0, 128, 2, 0, 64, 0, 0, 0, 16, 1, 2, 8, 8, 1, 0, 64, 128, 32, 32, 64, 1, 0, 0, 0, 8, 2, 0, 128, 2, 0, 64, 0, 0, 0, 16, 4, 0, 0, 0, 2, 8, 0, 32, 8, 0, 16, 0, 0, 0, 64, 1, 0, 0, 0, 4, 0, 0, 0, 5, 0, 16, 0, 4, 204, 192, 32, 8, 0, 51, 4, 0, 0, 0, 1, 0, 16, 32, 128, 128, 16, 8, 8, 8, 1, 51, 0, 76, 0, 128, 128, 128, 19, 48, 4, 192, 1, 0, 0, 0, 8, 2, 0, 128, 2, 0, 64, 0, 0, 0, 16, 14, 69, 48, 3, 19, 244, 224, 1, 0, 0, 0, 8, 2, 0, 128, 2, 0, 64, 0, 0, 0, 16, 8, 0, 16, 0, 0, 0, 32, 64, 0, 0, 0, 16, 0, 0, 0, 80, 8, 8, 8, 8, 0, 80, 0, 0, 0, 64, 0, 0, 0, 80, 14, 69, 48, 3, 19, 244, 224, 1, 0, 0, 0, 8, 2, 0, 128, 2, 0, 64, 0, 0, 0, 16, 1, 51, 16, 6, 76, 117, 16, 2, 0, 64, 0, 0, 0, 128, 177, 92, 0, 196, 207, 27, 0, 16, 0, 0, 0, 64, 0, 0, 0, 80, 1, 51, 16, 6, 76, 117, 16, 8, 0, 16, 0, 0, 0, 32, 177, 92, 0, 196, 207, 27, 0, 64, 128, 32, 32, 64, 2, 2, 2, 2]
+
+parabola_count = 45
+
+[[parabolas]]
+x = 5500
+x_sign = 0
+y = 13000
+y_sign = 0
+vx = 35000
+vx_sign = 0
+vy = 0
+vy_sign = 0
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 0
+hint = 0
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 13000
+y_sign = 0
+vx = 11031
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 4585
+x_sign = 0
+y = 12064
+y_sign = 0
+vx = 35000
+vx_sign = 1
+vy = 15329
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 10
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 12064
+y_sign = 0
+vx = 11179
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 1
+
+[[parabolas]]
+x = 6536
+x_sign = 0
+y = 8974
+y_sign = 0
+vx = 35000
+vx_sign = 1
+vy = 20275
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 8
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 8974
+y_sign = 0
+vx = 10882
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 5628
+x_sign = 0
+y = 4437
+y_sign = 0
+vx = 35000
+vx_sign = 0
+vy = 32428
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 6
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 5102
+y_sign = 0
+vx = 11104
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 4525
+x_sign = 0
+y = 7651
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 22524
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 9
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 6928
+y_sign = 1
+vx = 11179
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 6158
+x_sign = 0
+y = 17857
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 29728
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 12
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 17857
+y_sign = 1
+vx = 11178
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 1
+
+[[parabolas]]
+x = 5085
+x_sign = 0
+y = 22475
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 31529
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 6
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 21888
+y_sign = 1
+vx = 11030
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 4586
+x_sign = 0
+y = 32507
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 8576
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 12
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 32389
+y_sign = 1
+vx = 11179
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 2603
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 5250
+x_sign = 0
+y = 37426
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 35128
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 5
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 37426
+y_sign = 1
+vx = 11105
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 1
+
+[[parabolas]]
+x = 5495
+x_sign = 0
+y = 41786
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 33781
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 5
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 41512
+y_sign = 1
+vx = 11030
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 6066
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 5713
+x_sign = 0
+y = 48060
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 34677
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 5
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 48060
+y_sign = 1
+vx = 11104
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 1
+
+[[parabolas]]
+x = 5878
+x_sign = 0
+y = 52079
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 35579
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 4
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 51492
+y_sign = 1
+vx = 11105
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 4640
+x_sign = 0
+y = 63339
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 27028
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 9
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 63339
+y_sign = 1
+vx = 10956
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 5023
+x_sign = 0
+y = 68020
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 30176
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 6
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 67688
+y_sign = 1
+vx = 11104
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 7366
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 6475
+x_sign = 0
+y = 71401
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 5428
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 14
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 70873
+y_sign = 1
+vx = 11179
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 4790
+x_sign = 0
+y = 81975
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 29277
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 7
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 81975
+y_sign = 1
+vx = 10956
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 5835
+x_sign = 0
+y = 86091
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 35128
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 5
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 86091
+y_sign = 1
+vx = 11031
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 5096
+x_sign = 0
+y = 90110
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 35576
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 4
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 89563
+y_sign = 1
+vx = 11104
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 6475
+x_sign = 0
+y = 101687
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 13077
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 9
+
+[[parabolas]]
+x = 2000
+x_sign = 0
+y = 101687
+y_sign = 1
+vx = 10957
+vx_sign = 0
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 6353
+x_sign = 0
+y = 105867
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 24323
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 6
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 105867
+y_sign = 1
+vx = 11180
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 1
+
+[[parabolas]]
+x = 5953
+x_sign = 0
+y = 109783
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 36024
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 4
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 109196
+y_sign = 1
+vx = 11104
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 11000
+vy_factor_sign = 0
+to_state = 4
+from_state = 3
+hint = 0
+
+[[parabolas]]
+x = 4526
+x_sign = 0
+y = 121759
+y_sign = 1
+vx = 35000
+vx_sign = 0
+vy = 23880
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 9
+
+[[parabolas]]
+x = 9000
+x_sign = 0
+y = 121759
+y_sign = 1
+vx = 10955
+vx_sign = 1
+vy = 45477
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 4
+from_state = 2
+hint = 2
+
+[[parabolas]]
+x = 4646
+x_sign = 0
+y = 124526
+y_sign = 1
+vx = 35000
+vx_sign = 1
+vy = 19379
+vy_sign = 1
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 2
+from_state = 4
+hint = 9
+
+[[parabolas]]
+x = 0
+x_sign = 0
+y = 0
+y_sign = 0
+vx = 0
+vx_sign = 0
+vy = 0
+vy_sign = 0
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 0
+from_state = 0
+hint = 0
+
+[[parabolas]]
+x = 0
+x_sign = 0
+y = 0
+y_sign = 0
+vx = 0
+vx_sign = 0
+vy = 0
+vy_sign = 0
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 0
+from_state = 0
+hint = 0
+
+[[parabolas]]
+x = 0
+x_sign = 0
+y = 0
+y_sign = 0
+vx = 0
+vx_sign = 0
+vy = 0
+vy_sign = 0
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 0
+from_state = 0
+hint = 0
+
+[[parabolas]]
+x = 0
+x_sign = 0
+y = 0
+y_sign = 0
+vx = 0
+vx_sign = 0
+vy = 0
+vy_sign = 0
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 0
+from_state = 0
+hint = 0
+
+[[parabolas]]
+x = 0
+x_sign = 0
+y = 0
+y_sign = 0
+vx = 0
+vx_sign = 0
+vy = 0
+vy_sign = 0
+vy_factor = 0
+vy_factor_sign = 0
+to_state = 0
+from_state = 0
+hint = 0

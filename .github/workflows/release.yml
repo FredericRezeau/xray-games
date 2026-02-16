@@ -33,3 +33,14 @@ jobs:
       make_target: 'build_cargo'
     secrets:
       release_token: ${{ secrets.GITHUB_TOKEN }}
+  release-runner:
+    uses: stellar-expert/soroban-build-workflow/.github/workflows/release.yml@main
+    with:
+      release_name: ${{ github.ref_name }}
+      release_description: 'runner contract release'
+      home_domain: 'kyungj.in'
+      relative_path: contracts/runner
+      package: 'chain-runner'
+      make_target: 'build_cargo'
+    secrets:
+      release_token: ${{ secrets.GITHUB_TOKEN }}

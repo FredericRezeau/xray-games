@@ -3,8 +3,8 @@
     Licensed under the MIT License.
     Author: Fred Kyung-jin Rezeau (오경진 吳景振) <hello@kyungj.in>
 */
- 
- pragma circom 2.1.9;
+
+pragma circom 2.1.9;
 
 include "node_modules/circomlib/circuits/poseidon.circom";
 include "node_modules/circomlib/circuits/comparators.circom";
@@ -389,7 +389,7 @@ template Slicer() {
     var MAX_VERTICES_PER_PARTITION = 14;
     var MAX_OBJECTS = 15;
     var MAX_SEGMENTS = 3;
-    var NUM_PAIRS = MAX_OBJECTS * (MAX_OBJECTS - 1) / 2;
+    var MAX_PAIRS = MAX_OBJECTS * (MAX_OBJECTS - 1) / 2;
 
     // Public.
     signal input levelHash;
@@ -570,9 +570,9 @@ template Slicer() {
         pFail[o] === 0;
     }
 
-    component pairEq[NUM_PAIRS];
-    signal bAct[NUM_PAIRS];
-    signal uFail[NUM_PAIRS];
+    component pairEq[MAX_PAIRS];
+    signal bAct[MAX_PAIRS];
+    signal uFail[MAX_PAIRS];
     var pi = 0;
     for (var i = 0; i < MAX_OBJECTS; i++) {
         for (var j = i + 1; j < MAX_OBJECTS; j++) {

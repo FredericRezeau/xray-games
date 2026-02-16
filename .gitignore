@@ -10,6 +10,7 @@ circuits/circom/*/*.json
 !circuits/circom/*/package.json
 circuits/circom/*/build
 circuits/circom/*/*_js
+circuits/circom/*/*.mjs
 *.ptau
 *.r1cs
 *.sym

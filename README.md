@@ -25,9 +25,9 @@ All smart contracts and zero-knowledge circuits powering the arcade are open sou
 
 ## Zero-Knowledge Circuits
 
-The circuit is available in both Noir (w/ Poseidon2) and Circom (2.1.9 w/ circomlib Poseidon and comparators).
+The circuits are available in both Noir (w/ Poseidon2) and Circom (2.1.9 w/ circomlib Poseidon and comparators).
 
-To reduce verification from O(n²) brute-force checking to O(n), the `slicer` circuit uses a hint-based architecture (benefiting Noir more than Circom), slightly increasing the prover complexity but shrinking the compiled circuit from ~100MB to ~4MB. [Read more on my blog](https://kyungj.in/posts/trustless-gaming-stellar-xray-games/).
+To reduce verification from O(n²) brute-force checking to O(n), the circuits use a hint-based architecture (benefiting Noir more than Circom), slightly increasing the prover complexity but shrinking the compiled circuit from ~100MB to ~4MB. [Read more on my blog](https://kyungj.in/posts/trustless-gaming-stellar-xray-games/).
 
 | Backend | Constraints/Width | Compiled Size |
 |---------|-------------------|---------------|
@@ -59,14 +59,16 @@ For contracts:
 stellar contract build
 ```
 
-For the Circom circuit:
+For the Circom circuits:
 ```bash
-circom slicer.circom --r1cs --wasm --sym
+circom <circuit> --r1cs --wasm --sym
+# example: circom slicer.circom --r1cs --wasm --sym
 ```
 
-For the Noir circuit:
+For the Noir circuits:
 ```bash
-nargo compile --package slicer
+nargo compile --package <package name>
+# example: nargo compile --package slicer
 ```
 
 ## Mainnet Contracts
@@ -75,6 +77,7 @@ nargo compile --package slicer
 |----------|---------|
 | Chain Slicer | `CD4XBH2QTIYJYGFEF6PGXPDL7HQRB2SL5Z2CHPJZMRCHMUHXH7J7YOLT` |
 | Chain Snooker | `CBLPDJAKIDUSFUYTVI25HTR6G64J5NOMCVWEOAKW4DOLABJDZMYK4ZXJ` |
+| Chain Runner | `CATJOAEWORAGHR5ANI5GOKXVJGM75OW73QZ7UUL25PTPQW3V5WFBJEQM` |
 
 Admin: `GDMS6MPSI7DKP4VRZ4NK6LHFWUJ4QAHZ3VO22NYCKBLNOBSWDANGGAME`
 

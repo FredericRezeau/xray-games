@@ -246,8 +246,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "chain-runner"
+version = "1.0.5"
+dependencies = [
+ "common",
+ "soroban-sdk",
+]
+
+[[package]]
 name = "chain-slicer"
-version = "1.0.4"
+version = "1.0.5"
 dependencies = [
  "common",
  "soroban-sdk",
@@ -255,7 +263,7 @@ dependencies = [
 
 [[package]]
 name = "chain-snooker"
-version = "1.0.4"
+version = "1.0.5"
 dependencies = [
  "common",
  "soroban-sdk",

@@ -1,9 +1,9 @@
 [package]
-name = "chain-slicer"
+name = "chain-runner"
 version = "1.0.5"
 edition = "2021"
 authors = ["Fred Kyung-jin Rezeau <hello@kyungj.in>"]
-description = "A Stellar smart contract implementing a trustless geometry puzzle game verified by zero-knowledge proofs"
+description = "A Stellar smart contract implementing a trustless runner game verified by zero-knowledge proofs"
 repository = "https://github.com/fredericrezeau/xray-games"
 publish = false
 
